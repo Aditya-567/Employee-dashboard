@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import emppic from './4.jpg';
+import bronze from './bronze.png';
+import gold from './gold.png';
+import silver from './silver.png';
 
 
-const Employee = ({ rank, name, designation, hoursWorked, changes }) => {
+const Employee = ({ rank, name, designation, hoursWorked, changes, image }) => {
     const getRankIcon = (rank) => {
         switch (rank) {
             case 1:
-                return "🥇";
+                return <div className="medals"><img src={gold} alt="Gold Medal" className="medal-icon" /><p>1</p></div>;
             case 2:
-                return "🥈";
+                return <div className="medals"><img src={silver} alt="Gold Medal" className="medal-icon" /><p>2</p></div>;
             case 3:
-                return "🥉";
+                return <div className="medals"><img src={bronze} alt="Gold Medal" className="medal-icon" /><p>3</p></div>;
             default:
                 return rank;
         }
@@ -29,7 +33,10 @@ const Employee = ({ rank, name, designation, hoursWorked, changes }) => {
     return (
         <tr>
             <td>{getRankIcon(rank)}</td>
-            <td>{name}</td>
+            <td>
+                <img src={emppic} alt={name} className="employee-image" />
+                {name}
+            </td>
             <td>{designation}</td>
             <td>{hoursWorked}</td>
             <td>{renderChanges(changes)}</td>
@@ -45,6 +52,7 @@ const EmployeesActivityDashboard = () => {
             designation: "UI/UX Designer",
             hoursWorked: "7(42)",
             changes: "▲ 1.5 hrs",
+            image: "path/to/rakesh-sharma.png",
         },
         {
             rank: 2,
@@ -52,6 +60,7 @@ const EmployeesActivityDashboard = () => {
             designation: "HR Recruiter",
             hoursWorked: "7(41)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/ankita-thakur.png",
         },
         {
             rank: 3,
@@ -59,6 +68,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Product Manager",
             hoursWorked: "7(40)",
             changes: "▲ 1.5 hrs",
+            image: "path/to/sarah-yadav.png",
         },
         {
             rank: 4,
@@ -66,6 +76,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Designer",
             hoursWorked: "7(37)",
             changes: "▲ 1.5 hrs",
+            image: "path/to/harsha-shivhare.png",
         },
         {
             rank: 5,
@@ -73,6 +84,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Video Editor",
             hoursWorked: "7(37)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/vanhi-rai.png",
         },
         {
             rank: 6,
@@ -80,6 +92,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Business Analyst",
             hoursWorked: "7(32)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/bhanu-sharma.png",
         },
         {
             rank: 8,
@@ -87,6 +100,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Developer",
             hoursWorked: "7(24)",
             changes: "▲ 1.5 hrs",
+            image: "path/to/sunil-yadav.png",
         },
         {
             rank: 9,
@@ -94,6 +108,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Business Analyst",
             hoursWorked: "7(21)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/akash-roy.png",
         },
         {
             rank: 10,
@@ -101,6 +116,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Developer",
             hoursWorked: "7(20)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/rohit-soni.png",
         },
         {
             rank: 11,
@@ -108,6 +124,7 @@ const EmployeesActivityDashboard = () => {
             designation: "Developer",
             hoursWorked: "7(18)",
             changes: "▼ 1.5 hrs",
+            image: "path/to/suraj-chauhan.png",
         },
     ]);
 
