@@ -1,0 +1,34 @@
+.employee-card {
+  width: 250px;
+  height: 405px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to top, #eeedfb, #ffffff);
+}
+.employee-photo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.employee-title {
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.employee-name {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.employee-role {
+  color: #555;
+  margin: 5px 0 20px;
+  font-size: 0.5rem;
+}
+
+.employee-illustration {
+  width: 70%;
+}

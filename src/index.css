@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.maindash {
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+  gap: 20px; /* Adjust this value as needed */
+}
+.logo {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.dashboard {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 1500px;
+  width: 1080px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.time {
+  font-size: 1rem;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.table-container {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1e40ae; /* Change the background color of table headers to blue */
+  color: white; /* Ensure the text color is readable on the blue background */
+}
+
+tr {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+td:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+td:nth-child(2) img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
